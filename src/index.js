@@ -162,6 +162,11 @@ const CurrencyInput = React.createClass({
     },
 
 
+    focus() {
+        this.refs.input.focus();
+    },
+
+
     /**
      * Component lifecycle function.
      * @returns {XML}
@@ -174,6 +179,7 @@ const CurrencyInput = React.createClass({
                 value={this.state.maskedValue}
                 onChange={this.handleChange}
                 {...this.state.customProps}
+                ref='input'
             />
         )
     }
